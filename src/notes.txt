@@ -1,5 +1,6 @@
 - import "import React, { useState } from 'react';"
 
+--------------------------------------------------
 Rules of using hooks:
 - Hooks are only for function components
 - Hooks can only be used at the begining of the function component
@@ -24,6 +25,12 @@ FUNCTION AND VARIABLE INITIALIZATION
         return 4;
     });
 
+    --------------------------------------
+
+    const countInitialization = () => {
+        console.log('count initialization function');
+        return 4;
+    }
     -- Runs the first time
     const [count, setCount] = useState(() => countInitialization());
 
@@ -41,3 +48,12 @@ OBJECTS IN STATES
 
 --------------------------------------------------
 TRY USING MULTIPLE STATE VARIABLES
+
+--------------------------------------------------
+UPDATE STATE VARIABLE - prevState
+
+   const decrementCount = () => {
+    setCount(count - 1);
+    /* using setCount multiple times will not update state variable*
+    // setCount(prevCount => prevCount - 1);
+   }
