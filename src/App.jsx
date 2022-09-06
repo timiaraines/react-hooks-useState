@@ -14,10 +14,10 @@ function App() {
   /**
    *  Initializing state variable using function and variable
    */
-const countInitialization = () => {
-  console.log('count initialization function');
-  return 4;
-}
+  const countInitialization = () => {
+    console.log('count initialization function');
+    return 4;
+  }
 
   const [count, setCount] = useState(() => countInitialization());
 
@@ -26,6 +26,9 @@ const countInitialization = () => {
     // setCount(prevCount => prevCount - 1);
   }
 
+  const incrementCount = () => {
+    // TODO: Increse the count by 1. 
+  }
   return (
     <div className="App">
       <button onClick={decrementCount}>-</button>

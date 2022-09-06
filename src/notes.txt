@@ -14,7 +14,7 @@ Rules of using hooks:
     setTimeout(() => {
       console.log("Delayed for 1 second.");
     }, 1000)  
-
+--------------------------------------------------
 FUNCTION AND VARIABLE INITIALIZATION
 - Constructor runs when the component is rendered.
 -  but hooks runs everytime function is called.
@@ -29,3 +29,15 @@ FUNCTION AND VARIABLE INITIALIZATION
 
     -- Runs everytime function is called
     const [count, setCount] = useState(countInitialization());
+
+--------------------------------------------------
+OBJECTS IN STATES
+  const [state, setState] = useState({ count: 4, theme: 'blue'});
+  const decrementCount = () => {
+    setState(prevState => {
+      return {...prevState, count : prevState.count - 1}
+    });
+  }
+
+--------------------------------------------------
+TRY USING MULTIPLE STATE VARIABLES
