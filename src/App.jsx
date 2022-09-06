@@ -16,19 +16,19 @@ function App() {
    * https://blog.webdevsimplified.com/2020-04/use-state/
    * 
   */
-
+  const[count, setCount] = useState(5);
   const decrementCount = () => {
-    // TODO: Decrement count by 1. 
+    setCount(count- 1) 
   }
 
   const incrementCount = () => {
-    // TODO: Increse count by 1. 
+    setCount(count + 1) 
   }
   return (
     <div className="App">
       <button onClick={decrementCount}>-</button>
-      <h1>{/* TODO add Count */}</h1>
-      <button>+</button>
+      <h1>{count}</h1>
+      <button onClick={incrementCount}>+</button>
     </div>
   );
 }
