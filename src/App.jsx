@@ -12,6 +12,9 @@ function App() {
    * 
    * - Initializing a state variable using function
    * 
+   * Blog witht he same concepts:
+   * https://blog.webdevsimplified.com/2020-04/use-state/
+   * 
   */
 
   const decrementCount = () => {
